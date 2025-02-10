@@ -3,6 +3,8 @@ import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
 import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
 import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
 import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
+import grainImage from "@/assets/images/grain.jpg";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -38,5 +40,26 @@ const testimonials = [
 ];
 
 export const TestimonialsSection = () => {
-  return <div>Testimonials Section</div>;
+  return (
+    <section className="pb-16 lg:py-24">
+      <div className="container">
+        <div className="flex justify-center">
+          <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-center bg-clip-text text-transparent">
+            Peer Reviews
+          </p>
+        </div>
+        <h2 className="font-serif text-3xl md:text-5xl text-center mt-6">Some Peer Reviews</h2>
+        <div className="mt-10 md:mt-20 lg:mt-32 flex flex-col gap-20">
+          {testimonials.map((testimonial) => (
+            <div
+              key={testimonial.name}
+              className=""
+            >
+
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
